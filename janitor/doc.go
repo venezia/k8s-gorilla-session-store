@@ -35,7 +35,6 @@ would typically result in an error being returned happens, a log entry is provid
 
 # Logging Considerations
 
-This package supports [golang.org/x/exp/slog.Logger] as a logger provided to it through the configuration of a new store.
-This will transition into the standard library implementation once go 1.21 is released
+This package supports [log/slog.Logger] as a logger provided to it through the configuration of a new store.
 */
 package janitor

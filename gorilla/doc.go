@@ -14,8 +14,7 @@ Please consider using the package [github.com/venezia/k8s-gorilla-session-store/
 
 # Logging Considerations
 
-This package supports [golang.org/x/exp/slog.Logger] as a logger provided to it through the configuration of a new store.
-This will transition into the standard library implementation once go 1.21 is released
+This package supports [log/slog.Logger] as a logger provided to it through the configuration of a new store.
 
 # Size limitations
 

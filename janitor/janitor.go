@@ -2,9 +2,8 @@ package janitor
 
 import (
 	"context"
+	"log/slog"
 	"time"
-
-	"golang.org/x/exp/slog"
 
 	clientset "github.com/venezia/k8s-gorilla-session-store/k8s/client/clientset/versioned"
 )

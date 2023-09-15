@@ -4,7 +4,7 @@ import (
 	"context"
 	"github.com/gorilla/securecookie"
 	"github.com/gorilla/sessions"
-	"golang.org/x/exp/slog"
+	"log/slog"
 
 	clientset "github.com/venezia/k8s-gorilla-session-store/k8s/client/clientset/versioned"
 )

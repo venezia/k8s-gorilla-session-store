@@ -82,7 +82,7 @@ func (s *Store) K8SLoad(ctx context.Context, session *sessions.Session) (bool, e
 			}
 			return false, nil
 		}
-		// It wasn't not found, so we need to return an error...
+		// It wasn't "not found", so we need to return an error...
 		return false, &Error{
 			Type:    ExecutionErrorType,
 			Message: LogSessionDataRetrievalErrorOccurred,

@@ -1,6 +1,6 @@
 module github.com/venezia/k8s-gorilla-session-store
 
-go 1.20
+go 1.21
 
 require (
 	github.com/gorilla/securecookie v1.1.1
@@ -8,7 +8,7 @@ require (
 	github.com/onsi/ginkgo/v2 v2.9.1
 	github.com/onsi/gomega v1.27.4
 	go.uber.org/zap v1.24.0
-	go.uber.org/zap/exp v0.0.0-20230801050034-a93cd4a71e41
+	go.uber.org/zap/exp v0.2.0
 	golang.org/x/exp v0.0.0-20230728194245-b0cb94b80691
 	k8s.io/apimachinery v0.27.4
 	k8s.io/client-go v0.27.3
@@ -42,7 +42,6 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/testify v1.8.3 // indirect
-	github.com/yuin/goldmark v1.5.5 // indirect
 	go.uber.org/atomic v1.10.0 // indirect
 	go.uber.org/multierr v1.10.0 // indirect
 	golang.org/x/net v0.12.0 // indirect

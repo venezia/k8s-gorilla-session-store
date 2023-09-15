@@ -2,6 +2,7 @@ package janitor_test
 
 import (
 	"context"
+	"log/slog"
 	"os"
 	"strings"
 	"time"
@@ -10,7 +11,6 @@ import (
 	. "github.com/onsi/gomega"
 	"go.uber.org/zap"
 	"go.uber.org/zap/exp/zapslog"
-	"golang.org/x/exp/slog"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	applymetav1 "k8s.io/client-go/applyconfigurations/meta/v1"
 
@@ -61,7 +61,7 @@ func generateGenericConfig() *janitor.Config {
 		logConfig.Encoding = "console"
 		zapLogger, _ := logConfig.Build()
 
-		config.Logger = slog.New(zapslog.NewHandler(zapLogger.Core()))
+		config.Logger = slog.New(zapslog.NewHandler(zapLogger.Core(), nil))
 	}
 
 	return config

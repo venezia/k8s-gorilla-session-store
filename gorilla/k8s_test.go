@@ -10,7 +10,7 @@ import (
 	. "github.com/onsi/gomega"
 	"go.uber.org/zap"
 	"go.uber.org/zap/exp/zapslog"
-	"golang.org/x/exp/slog"
+	"log/slog"
 
 	"github.com/venezia/k8s-gorilla-session-store/gorilla"
 )
@@ -152,7 +152,7 @@ func generateGenericConfig() *gorilla.Config {
 		logConfig.Encoding = "console"
 		zapLogger, _ := logConfig.Build()
 
-		config.Logger = slog.New(zapslog.NewHandler(zapLogger.Core()))
+		config.Logger = slog.New(zapslog.NewHandler(zapLogger.Core(), nil))
 	}
 
 	return config
